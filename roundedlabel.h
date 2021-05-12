@@ -10,15 +10,12 @@ public:
     explicit RoundedLabel(QWidget *parent = nullptr);
     void setPixmap(const QPixmap& pixmap);
     void setBorderRadius(int value);
+    QSize sizeHint() const;
 
 protected:
     void paintEvent(QPaintEvent *event);
     int mBorderRadius;
     QPixmap mPixmap;
-
-    // QWidget interface
-public:
-    QSize sizeHint() const;
 };
 
 #endif // ROUNDEDLABEL_H
